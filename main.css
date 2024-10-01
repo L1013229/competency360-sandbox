@@ -36,11 +36,21 @@ body {
     padding: 10px 20px;
 }
 
-.navbar .logo a {
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-image {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+.logo a span {
     color: #fff;
     font-size: 24px;
     font-family: var(--font-heading);
-    text-decoration: none;
 }
 
 .navbar .menu-icon {
@@ -87,6 +97,7 @@ body {
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-position: center;
 }
 
 .layer1 {
@@ -105,12 +116,14 @@ body {
 }
 
 .hero-text {
-    position: relative;
+    position: absolute;
     z-index: 4;
-    text-align: center;
+    text-align: left;
     top: 50%;
+    left: 5%;
     transform: translateY(-50%);
     color: #fff;
+    max-width: 500px;
 }
 
 .hero-text .slide-title {
@@ -152,10 +165,17 @@ section {
     line-height: 1.6;
 }
 
+.introduction h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    margin: 40px 0 20px;
+}
+
 .service-highlights {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 20px;
     justify-content: space-between;
 }
 
@@ -204,41 +224,17 @@ section {
     margin-bottom: 40px;
 }
 
-.sample-report .report-image {
-    text-align: center;
-    position: relative;
+.report-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.sample-report .report-image img {
+.report-images img {
     max-width: 100%;
     height: auto;
+    margin-bottom: 20px;
     border: 1px solid var(--color-light-gray);
-}
-
-/* Tooltip styling for interactive report */
-.sample-report .report-image area {
-    cursor: pointer;
-}
-
-.sample-report p {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 18px;
-}
-
-/* Services Section */
-.services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.services-grid .service-item {
-    flex: 1 1 45%;
-    background-color: #fff;
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
 }
 
 /* Process Overview Section */
@@ -270,6 +266,12 @@ section {
 
 .process-steps .step p {
     font-size: 16px;
+}
+
+.process-note {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
 }
 
 /* Contact Section */
@@ -397,6 +399,11 @@ footer .social-media a:hover {
 
     .navbar .nav-links li {
         margin: 10px 0;
+    }
+
+    .hero-text {
+        left: 10%;
+        max-width: 80%;
     }
 }
 
