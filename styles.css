@@ -1,175 +1,431 @@
-/* Reset and base styles */
-* {
+/* Reset/Normalize CSS */
+/* Include your reset or normalize CSS here */
+
+/* Custom Properties for Colors and Fonts */
+:root {
+    --color-primary: #39baa0;
+    --color-secondary: #00132e;
+    --color-accent: #FFC23B;
+    --color-text: #0f0f0f;
+    --color-light-gray: #E5E5E4;
+    --font-heading: 'Mr Eaves Mod - Heavy', sans-serif;
+    --font-body: 'Mr Eaves Mod - Regular', sans-serif;
+}
+
+/* Body Styling */
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-light-gray);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #333;
+
+/* Header and Navigation */
+#main-header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-secondary);
+    z-index: 1000;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--font-heading);
+    text-decoration: none;
+}
+
+.navbar .menu-icon {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Hero Section */
+.hero-slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-slider .slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.parallax-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url('layer1.jpg');
+    z-index: 1;
+}
+
+.layer2 {
+    background-image: url('layer2.png');
+    z-index: 2;
+}
+
+.layer3 {
+    background-image: url('layer3.png');
+    z-index: 3;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.hero-text .slide-title {
+    font-size: 48px;
+    font-family: var(--font-heading);
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.button.cta-button {
+    background-color: var(--color-accent);
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button.cta-button:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+/* Content Sections */
+section {
+    padding: 60px 20px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-/* Header styles */
-header {
-    background-color: #07193A;
-    color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.introduction p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-/* Hero section */
-.hero {
-    background-color: #1C4991;
-    color: white;
-    text-align: center;
-    padding: 4rem 0;
-}
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-.cta-button {
-    display: inline-block;
-    background-color: #FFC23B;
-    color: #07193A;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-.cta-button:hover {
-    background-color: #34C6A3;
-}
-
-/* Introduction section */
-.intro {
-    padding: 4rem 0;
-    background-color: #E5E5E4;
-}
 .service-highlights {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
     justify-content: space-between;
-    margin-top: 2rem;
-}
-.service-highlight {
-    flex-basis: 30%;
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-}
-.service-highlight i {
-    font-size: 3rem;
-    color: #1C4991;
-    margin-bottom: 1rem;
 }
 
-/* Sample report section */
-.sample-report {
-    padding: 4rem 0;
+.service-item {
+    flex: 1 1 30%;
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
 }
-.report-image {
+
+.service-item img {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+}
+
+.service-item p {
+    font-size: 16px;
+}
+
+.button {
+    background-color: var(--color-accent);
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+/* Sample Report Section */
+.sample-report h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    margin-bottom: 40px;
+}
+
+.sample-report .report-image {
+    text-align: center;
+    position: relative;
+}
+
+.sample-report .report-image img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    border: 1px solid var(--color-light-gray);
 }
 
-/* Services section */
-.services {
-    padding: 4rem 0;
-    background-color: #E5E5E4;
+/* Tooltip styling for interactive report */
+.sample-report .report-image area {
+    cursor: pointer;
 }
-.service-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+
+.sample-report p {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
 }
-.service-card {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+/* Services Section */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services-grid .service-item {
+    flex: 1 1 45%;
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
     text-align: center;
 }
-.service-card i {
-    font-size: 2.5rem;
-    color: #1C4991;
-    margin-bottom: 1rem;
+
+/* Process Overview Section */
+.process-overview h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    margin-bottom: 40px;
 }
 
-/* Process section */
-.process {
-    padding: 4rem 0;
-}
 .process-steps {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 2rem;
-}
-.process-step {
-    flex-basis: 22%;
-    text-align: center;
-}
-.process-step i {
-    font-size: 2.5rem;
-    color: #1C4991;
-    margin-bottom: 1rem;
 }
 
-/* Contact section */
-.contact {
-    padding: 4rem 0;
-    background-color: #07193A;
-    color: white;
+.process-steps .step {
+    flex: 1 1 45%;
+    margin: 10px;
+    padding: 20px;
+    border-left: 4px solid var(--color-secondary);
 }
-form {
-    display: grid;
-    gap: 1rem;
-    max-width: 500px;
+
+.process-steps .step h3 {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+}
+
+.process-steps .step p {
+    font-size: 16px;
+}
+
+/* Contact Section */
+.contact h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+.contact p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.contact-form {
+    max-width: 600px;
     margin: 0 auto;
 }
-input, textarea {
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    padding: 0.5rem;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-button {
+    background-color: var(--color-accent);
+    color: #000;
+    padding: 15px 30px;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* Footer */
-footer {
-    background-color: #07193A;
-    color: white;
+.submit-button:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.contact-details {
     text-align: center;
-    padding: 1rem 0;
+    margin-top: 40px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .service-highlights, .service-cards, .process-steps {
+.contact-details p {
+    font-size: 16px;
+}
+
+.contact-details a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--color-secondary);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media {
+    margin-bottom: 10px;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+footer .social-media a:hover {
+    color: var(--color-accent);
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 980px) {
+    /* Tablet styles */
+    .service-highlights,
+    .services-grid,
+    .process-steps {
         flex-direction: column;
+        align-items: center;
     }
-    .service-highlight, .service-card, .process-step {
-        margin-bottom: 1rem;
+
+    .navbar .menu-icon {
+        display: block;
+    }
+
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-secondary);
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Mobile styles */
+    .hero-text .slide-title {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 479px) {
+    /* Small mobile styles */
+    .hero-text .slide-title {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .service-item {
+        flex: 1 1 100%;
+    }
+
+    .process-steps .step {
+        flex: 1 1 100%;
     }
 }
