@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Carousel Functionality for Sample Report
+    // Carousel Slider for Sample Report
     const carouselTrack = document.querySelector('.carousel-track');
     const slides = Array.from(carouselTrack.children);
     const prevButton = document.querySelector('.prev-button');
@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSlideIndex = 0;
 
     function updateSlidePosition() {
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        carouselTrack.style.transform = 'translateX(' + (-slideWidth * currentSlideIndex) + 'px)';
+        const slideWidth = carouselTrack.getBoundingClientRect().width;
+        carouselTrack.style.transform = 'translateX(' + (-slideWidth * currentSlideIndex) + 'px') ;
     }
 
     nextButton.addEventListener('click', () => {
@@ -58,4 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
             updateSlidePosition();
         }
     });
+
+    // Update slide position on window resize
+    window.addEventListener('resize', updateSlidePosition);
+
+    // Initialize slide positions on page load
+    updateSlidePosition();
 });
