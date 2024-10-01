@@ -33,27 +33,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Interactive Report Tooltips
-    const reportImage = document.querySelector('.report-image');
-    if (reportImage) {
-        const tooltip = document.createElement('div');
-        tooltip.className = 'tooltip';
-        reportImage.appendChild(tooltip);
+    // Carousel Functionality for Sample Report
+    const carouselTrack = document.querySelector('.carousel-track');
+    const slides = Array.from(carouselTrack.children);
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    let currentSlideIndex = 0;
 
-        reportImage.addEventListener('mousemove', function(e) {
-            if (e.target.tagName === 'AREA') {
-                const tooltipText = e.target.getAttribute('data-tooltip');
-                tooltip.textContent = tooltipText;
-                tooltip.style.display = 'block';
-                tooltip.style.left = e.pageX + 'px';
-                tooltip.style.top = e.pageY + 'px';
-            } else {
-                tooltip.style.display = 'none';
-            }
-        });
-
-        reportImage.addEventListener('mouseout', function() {
-            tooltip.style.display = 'none';
-        });
+    function updateSlidePosition() {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        carouselTrack.style.transform = 'translateX(' + (-slideWidth * currentSlideIndex) + 'px)';
     }
+
+    nextButton.addEventListener('click', () => {
+        if (currentSlideIndex < slides.length - 1) {
+            currentSlideIndex++;
+            updateSlidePosition();
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentSlideIndex > 0) {
+            currentSlideIndex--;
+            updateSlidePosition();
+        }
+    });
 });
