@@ -250,6 +250,8 @@ section {
     overflow: hidden;
     max-width: 800px;
     margin: 0 auto 20px;
+    /* Remove fixed height to accommodate varying image heights */
+    height: auto;
 }
 
 .carousel-track {
@@ -257,9 +259,17 @@ section {
     transition: transform 0.5s ease-in-out;
 }
 
+.carousel-track .slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .carousel-track img {
-    width: 100%;
-    flex-shrink: 0;
+    max-width: 100%;
+    height: auto;
+    /* Remove fixed width and height */
 }
 
 .carousel-button {
@@ -281,6 +291,12 @@ section {
 .next-button {
     right: 10px;
 }
+
+/* Adjust carousel height dynamically */
+.report-carousel {
+    height: auto;
+}
+
 
 /* Centering the Download Button */
 .download-button {
