@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-NZ">
 <head>
     <meta charset="UTF-8">
+    <title>Competency 360 - TTM Competency Simplified</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competency 360 - TTM Competency, Simplified</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Competency 360 provides tailored competency reports and services for individuals and teams in Temporary Traffic Management (TTM).">
+    <meta name="keywords" content="TTM Competency, Competency Reports, Temporary Traffic Management">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Font Awesome for icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <ul>
+
+    <!-- Header Section -->
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home">Competency 360</a>
+            </div>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sample-report">Sample Report</a></li>
                 <li><a href="#services">Services</a></li>
@@ -19,144 +38,170 @@
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h1>TTM Competency, Simplified</h1>
-                <a href="#sample-report" class="cta-button">View Sample Report</a>
-            </div>
-        </section>
+    <!-- Main Content Area -->
+    <div id="et-main-area">
+        <div id="main-content">
+            <article>
+                <div class="entry-content">
 
-        <section class="intro">
-            <div class="container">
-                <h2>Tailored Competency Solutions for TTM</h2>
-                <p>With the end of the TTM Warrant system, Competency 360 provides tailored competency reports and services for individuals and teams in TTM. Our solution uses on-job evidence, simple competency assessments, and customised learning to ensure compliance and safety.</p>
-                <div class="service-highlights">
-                    <div class="service-highlight">
-                        <i class="fas fa-camera"></i>
-                        <h3>Competency Snapshots</h3>
-                        <p>Get individual and team competency reports, tailored by role, function, or environment.</p>
-                    </div>
-                    <div class="service-highlight">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>External Validation</h3>
-                        <p>Ensure independent checks of skills, including external credentials like unit standards.</p>
-                    </div>
-                    <div class="service-highlight">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>Micro-Learning Modules</h3>
-                        <p>Access self-paced, 10-minute learning modules covering key TTM knowledge areas.</p>
-                    </div>
+                    <!-- Hero Section -->
+                    <section id="home" class="hero-slider">
+                        <div class="slide">
+                            <!-- Parallax Layers -->
+                            <div class="parallax-layer layer1"></div>
+                            <div class="parallax-layer layer2"></div>
+                            <div class="parallax-layer layer3"></div>
+                            <div class="hero-text">
+                                <h1 class="slide-title">TTM Competency, Simplified.</h1>
+                                <p>Tailored competency solutions for the new era of Temporary Traffic Management.</p>
+                                <a href="#sample-report" class="button cta-button">View Sample Report</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Introduction Section -->
+                    <section class="introduction">
+                        <div class="container">
+                            <p>With the end of the TTM Warrant system, managing Temporary Traffic Management competency is more critical than ever. <strong>Competency 360</strong> provides tailored competency reports and services for individuals and teams in TTM. Our solution leverages on-job evidence, simple competency assessments, and customised learning to ensure compliance and safety.</p>
+                            <div class="service-highlights">
+                                <div class="service-item">
+                                    <img src="competency-snapshots.svg" alt="Competency Snapshots">
+                                    <h3>Competency Snapshots</h3>
+                                    <p>Personalised reports showcasing individual strengths and areas for improvement.</p>
+                                </div>
+                                <div class="service-item">
+                                    <img src="external-validation.svg" alt="External Validation">
+                                    <h3>External Validation</h3>
+                                    <p>Independent checks to ensure skills meet industry standards.</p>
+                                </div>
+                                <div class="service-item">
+                                    <img src="micro-learning.svg" alt="Micro-Learning Modules">
+                                    <h3>Micro-Learning Modules</h3>
+                                    <p>Engaging, self-paced learning to boost TTM knowledge.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Sample Report Section -->
+                    <section id="sample-report" class="sample-report">
+                        <div class="container">
+                            <h2>Interactive Report Snapshot</h2>
+                            <div class="report-image">
+                                <img src="sample-report.jpg" alt="Sample TTM Competency Report" usemap="#reportmap">
+                                <!-- Image Map for hoverable areas -->
+                                <map name="reportmap">
+                                    <!-- Define clickable areas with tooltips -->
+                                    <!-- Example area -->
+                                    <area shape="rect" coords="50,50,200,200" href="#" alt="Scoring" data-tooltip="Detailed scoring based on competency domains.">
+                                    <!-- Add more areas as needed -->
+                                </map>
+                            </div>
+                            <p>This report shows competency by domain, backed by real-world evidence. Each score is customised to roles and environments, giving a clear picture of strengths and gaps.</p>
+                            <a href="sample-report.pdf" class="button download-button" target="_blank">Download Sample Report</a>
+                        </div>
+                    </section>
+
+                    <!-- Services Section -->
+                    <section id="services" class="services">
+                        <div class="container">
+                            <h2>Our Competency Services</h2>
+                            <div class="services-grid">
+                                <div class="service-item">
+                                    <img src="competency-analysis.svg" alt="Competency Analysis">
+                                    <h3>Competency Analysis</h3>
+                                    <p>Develop a TTM competency matrix tailored to your business, roles, and tasks, producing specific reports to evidence competency against set expectations.</p>
+                                </div>
+                                <div class="service-item">
+                                    <img src="competency-libraries.svg" alt="Competency Libraries">
+                                    <h3>Competency Libraries</h3>
+                                    <p>Access a range of competencies that match roles and functions. Develop them internally with naturally occurring evidence from on-job performance.</p>
+                                </div>
+                                <div class="service-item">
+                                    <img src="competency-snapshots.svg" alt="Competency Snapshots">
+                                    <h3>Competency Snapshots</h3>
+                                    <p>Get individual and team competency reports, tailored by role, function, or environment. Snapshots show strengths and identify areas needing improvement.</p>
+                                </div>
+                                <div class="service-item">
+                                    <img src="competency-checks.svg" alt="Competency Checks">
+                                    <h3>Competency Checks</h3>
+                                    <p>External validation of competency, ensuring an independent check of skills. This includes external credentials like unit standards.</p>
+                                </div>
+                                <div class="service-item">
+                                    <img src="micro-learning.svg" alt="Online Micro-Learning Modules">
+                                    <h3>Online Micro-Learning Modules</h3>
+                                    <p>Self-paced, 10-minute learning modules covering key TTM knowledge areas. Mobile-friendly, engaging, and aligned with competency tracking.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Process Overview Section -->
+                    <section class="process-overview">
+                        <div class="container">
+                            <h2>Our Process</h2>
+                            <div class="process-steps">
+                                <div class="step">
+                                    <h3>1. Consultation and Needs Assessment</h3>
+                                    <p>We begin by understanding your unique requirements.</p>
+                                </div>
+                                <div class="step">
+                                    <h3>2. Competency Analysis and Report Generation</h3>
+                                    <p>We develop a customised competency matrix and generate detailed reports.</p>
+                                </div>
+                                <div class="step">
+                                    <h3>3. Ongoing Tracking and Development</h3>
+                                    <p>Monitor progress and continue development with our support.</p>
+                                </div>
+                                <div class="step">
+                                    <h3>4. Independent Validation (if needed)</h3>
+                                    <p>External validation to ensure compliance and safety.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contact Section -->
+                    <section id="contact" class="contact">
+                        <div class="container">
+                            <h2>Get in Touch</h2>
+                            <p>Have questions or ready to enhance your team's competency?</p>
+                            <form action="#" method="post" class="contact-form">
+                                <input type="text" name="name" placeholder="Name*" required>
+                                <input type="email" name="email" placeholder="Email*" required>
+                                <input type="text" name="company" placeholder="Company">
+                                <textarea name="message" placeholder="Message" rows="5"></textarea>
+                                <button type="submit" class="button submit-button">Submit</button>
+                            </form>
+                            <div class="contact-details">
+                                <p><strong>Email:</strong> <a href="mailto:info@competency360.co.nz">info@competency360.co.nz</a></p>
+                                <p><strong>Phone:</strong> <a href="tel:+6491234567">+64 9 123 4567</a></p>
+                                <p><strong>Address:</strong> Level 5, 123 Queen Street, Auckland, NZ</p>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
-            </div>
-        </section>
+            </article>
+        </div>
+    </div>
 
-        <section id="sample-report" class="sample-report">
-            <div class="container">
-                <h2>Sample TTM Competency Report</h2>
-                <img src="https://via.placeholder.com/800x600.png?text=Sample+TTM+Competency+Report" alt="Sample TTM Competency Report" class="report-image">
-                <p>This report shows competency by domain, backed by real-world evidence. Each score is customised to roles and environments to give a clear picture of strengths and gaps.</p>
-                <a href="#" class="cta-button">Download Sample Report</a>
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <div class="container">
-                <h2>Our Competency Services</h2>
-                <div class="service-cards">
-                    <div class="service-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Competency Analysis</h3>
-                        <p>Develop a TTM competency matrix tailored to your business, roles, and tasks, producing specific reports to evidence competency against set expectations.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-book"></i>
-                        <h3>Competency Libraries</h3>
-                        <p>Access a range of competencies that match roles and functions, and develop them internally with naturally occurring evidence from on-job performance.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-camera"></i>
-                        <h3>Competency Snapshots</h3>
-                        <p>Get individual and team competency reports, tailored by role, function, or environment. Snapshots show strengths and identify areas needing improvement.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-clipboard-check"></i>
-                        <h3>Competency Checks</h3>
-                        <p>External validation of competency, ensuring an independent check of skills. This includes external credentials like unit standards.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-laptop"></i>
-                        <h3>Online Micro-Learning Modules</h3>
-                        <p>Self-paced, 10-minute learning modules covering key TTM knowledge areas. Mobile-friendly, engaging, and aligned with competency tracking.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="process">
-            <div class="container">
-                <h2>Our Process</h2>
-                <div class="process-steps">
-                    <div class="process-step">
-                        <i class="fas fa-comments"></i>
-                        <h3>1. Consultation</h3>
-                        <p>Needs Assessment</p>
-                    </div>
-                    <div class="process-step">
-                        <i class="fas fa-search"></i>
-                        <h3>2. Analysis</h3>
-                        <p>Competency Analysis and Report Generation</p>
-                    </div>
-                    <div class="process-step">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>3. Development</h3>
-                        <p>Ongoing Tracking and Development</p>
-                    </div>
-                    <div class="process-step">
-                        <i class="fas fa-check-double"></i>
-                        <h3>4. Validation</h3>
-                        <p>Independent Validation (if needed)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Get in Touch</h2>
-                <form>
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="text" placeholder="Company">
-                    <textarea placeholder="Message" rows="4" required></textarea>
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
+    <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Competency 360. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2023 Competency 360. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+    <!-- JavaScript Files -->
+    <script src="main.js"></script>
 
-        // Interactive report image (placeholder functionality)
-        document.querySelector('.report-image').addEventListener('mouseover', function(e) {
-            console.log('Hovering over report image');
-            // Add tooltip or highlight functionality here
-        });
-    </script>
 </body>
 </html>
