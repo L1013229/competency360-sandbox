@@ -177,48 +177,53 @@ section {
     margin: 40px 0 20px;
 }
 
-.service-highlights {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    justify-content: space-between;
+/* Table of Contents */
+.table-of-contents {
+    margin: 40px 0;
 }
 
-.service-item {
-    flex: 1 1 30%;
-    background-color: #fff;
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-}
-
-.service-item img {
-    max-width: 80px;
+.table-of-contents h2 {
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
     margin-bottom: 20px;
 }
 
-.service-item h3 {
-    color: var(--color-secondary);
-    margin-bottom: 10px;
-    font-family: var(--font-heading);
+.table-of-contents ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.service-item p {
-    font-size: 16px;
+.table-of-contents li {
+    margin: 10px 0;
 }
 
-.button {
-    background-color: var(--color-accent);
-    color: #000;
-    padding: 10px 20px;
+.table-of-contents a {
+    color: var(--color-primary);
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+    font-size: 18px;
 }
 
-.button:hover {
-    background-color: var(--color-primary);
-    color: #fff;
+.table-of-contents a:hover {
+    text-decoration: underline;
+}
+
+/* Why Section */
+.why-section h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    margin-bottom: 40px;
+}
+
+.why-section h3 {
+    color: var(--color-secondary);
+    font-family: var(--font-heading);
+    margin-top: 30px;
+}
+
+.why-section p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* Services Section */
@@ -226,6 +231,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
 .services-grid .service-item {
@@ -237,71 +243,19 @@ section {
     text-align: center;
 }
 
-/* Sample Report Section */
-.sample-report h2 {
-    text-align: center;
-    font-family: var(--font-heading);
+.services-grid .service-item img {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+
+.services-grid .service-item h3 {
     color: var(--color-secondary);
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
 }
 
-.report-carousel {
-    position: relative;
-    overflow: hidden;
-    max-width: 800px;
-    margin: 0 auto 20px;
-    /* Remove fixed height to accommodate varying image heights */
-    height: auto;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-track .slide {
-    flex: 0 0 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel-track img {
-    max-width: 100%;
-    height: auto;
-    /* Remove fixed width and height */
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    border: none;
-    color: white;
-    font-size: 30px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.prev-button {
-    left: 10px;
-}
-
-.next-button {
-    right: 10px;
-}
-
-/* Adjust carousel height dynamically */
-.report-carousel {
-    height: auto;
-}
-
-
-/* Centering the Download Button */
-.download-button {
-    display: block;
-    margin: 0 auto;
+.services-grid .service-item p {
+    font-size: 16px;
 }
 
 /* Process Overview Section */
@@ -410,6 +364,65 @@ section {
     border-radius: 5px;
 }
 
+/* Sample Report Section */
+.sample-report h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    margin-bottom: 40px;
+}
+
+.report-carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    height: auto;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track .slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-track img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* Centering the Download Button */
+.download-button {
+    display: block;
+    margin: 0 auto;
+}
+
 /* Contact Section */
 .contact h2 {
     text-align: center;
@@ -509,7 +522,8 @@ footer .social-media a:hover {
 @media (max-width: 980px) {
     /* Tablet styles */
     .service-highlights,
-    .process-steps {
+    .process-steps,
+    .services-grid {
         flex-direction: column;
         align-items: center;
     }
